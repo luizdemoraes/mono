@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="https://github.com/luizdemoraes/mono/public/MONO.png" width="240" />
+  <img src="https://raw.githubusercontent.com/luizdemoraes/mono/master/public/MONO.png" width="240" />
 </p>
 
 <p align="center">
   <a href="#">
-    <img src="https://img.shields.io/badge/made%20with-love-E760A4.svg" alt="Made with love">
+    <img src="https://img.shields.io/badge/made%20with-love-E760A4.svg?style=flat-square" alt="Made with love">
   </a>
   <a href="#">
     <img src="https://img.shields.io/github/license/luizdemoraes/mono?style=flat-square" alt="License">
@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  MONO é um *gerador de paletas de cores monocromáticas*.
+  MONO é um <strong>gerador de paletas de cores monocromáticas</strong>.
 </p>
 
 ---
@@ -27,9 +27,9 @@ Apesar de ser um projeto pessoal e pequeno, se você encontrou algum bug ou dese
 
 ## Bibliotecas utilizadas
 
-- [https://reactjs.org/](ReactJS) - Com ajuda do [https://create-react-app.dev/](create-react-app)
-- [https://fkhadra.github.io/react-toastify/](react-toastify) - Para as notificações
-- [https://www.styled-components.com/](styled-components) - Para os estilos
-- [https://github.com/feross/clipboard-copy](clipboard-copy) - Para copiar cores para o clipboard
-- [https://www.framer.com/motion/](framer-motion) - Para as animações
-- [https://polished.js.org/](polished) - Para funções de manipulação de cores
+- [react](https://reactjs.org/) - Com ajuda do [create-react-app](https://create-react-app.dev/)
+- [react-toastify](https://fkhadra.github.io/react-toastify/) - Para as notificações
+- [styled-components](https://www.styled-components.com/) - Para os estilos
+- [clipboard-copy](https://github.com/feross/clipboard-copy) - Para copiar cores para o clipboard
+- [framer-motion](https://github.com/feross/clipboard-copy) - Para as animações
+- [polished](https://polished.js.org/) - Para funções de manipulação de cores
