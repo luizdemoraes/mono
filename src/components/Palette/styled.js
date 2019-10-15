@@ -1,8 +1,28 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
+import { readableColor } from "polished";
+
+const motionListVariants = {
+  hidden: {
+    opacity: 0,
+    x: -100,
+    transition: {
+      when: "afterChildren"
+    }
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.08
+    }
+  }
+};
 
 export const Box = styled.div`
-  flex: 1;
   display: flex;
+  height: 100%;
   flex-direction: column;
   padding: var(--space-sm);
   overflow: hidden;
@@ -14,9 +34,10 @@ export const Box = styled.div`
   }
 `;
 
-export const Title = styled.p`
+export const Title = styled.h2`
   font-size: 16px;
   font-weight: 700;
+  text-transform: capitalize;
   margin-top: var(--space-xs);
 
   @media only screen and (min-width: 768px) {
@@ -24,15 +45,18 @@ export const Title = styled.p`
   }
 `;
 
-export const List = styled.ul`
-  flex: 1;
+export const MotionList = styled(motion.ul).attrs(props => ({
+  initial: "hidden",
+  animate: "visible",
+  variants: motionListVariants
+}))`
   margin-top: var(--space-sm);
   display: grid;
   grid-gap: 4px;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, minmax(var(--space-lg), 1fr));
+  height: 100%;
   background-color: white;
-  overflow: hidden;
   list-style: none;
 
   @media only screen and (min-width: 768px) {
@@ -41,35 +65,49 @@ export const List = styled.ul`
   }
 `;
 
-export const Item = styled.li`
-  position: relative;
-  display: block;
-  cursor: pointer;
+export const MotionListItem = styled(motion.li).attrs(props => ({
+  variants: motionListVariants
+}))`
   width: 100%;
   height: 100%;
-  border-radius: var(--radius);
+`;
+
+export const Color = styled(motion.button).attrs(() => ({
+  whileHover: {
+    scale: 1.14,
+    zIndex: 1,
+    boxShadow: "0 3px 8px 0 rgba(15, 15, 15, .08)"
+  },
+  whileTap: {
+    scale: 1.05
+  }
+}))`
+  position: relative;
+  display: block;
+  cursor: copy;
+  width: 100%;
+  height: 100%;
+  border: none;
   background-color: ${props => props.color};
-  
-  @media only screen and (min-width: 1024px) {
-    &:after {
-      opacity: 0;
-      content: '${props => props.color}';
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: absolute;
-      border-radius: 6px;
-      padding: 4px var(--space-xxs);
-      color: white;
-      background-color: rgba(0, 0, 0, .8);
-      transition: opacity 0.2s;
-      font-size: 12px;
-      left: var(--space-xxs);
-      bottom: var(--space-xxs);
-    }
-    
-    &:hover:after {
-      opacity: 1;
-    }
+`;
+
+export const ColorLabel = styled.span`
+  opacity: 0;
+  display: none;
+  visibility: hidden;
+
+  @media only screen and (min-width: 768px) {
+    opacity: 1;
+    display: flex;
+    visibility: visible;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: var(--space-xxs);
+    bottom: var(--space-xxs);
+    padding: 4px var(--space-xxs);
+    color: ${readableColor("#ff4567", "#ddd", "#353535")};
+    font-size: 12px;
+    /* background-color: rgba(0, 0, 0, 0.2); */
   }
 `;

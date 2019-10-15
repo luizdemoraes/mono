@@ -1,18 +1,25 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import * as S from "./styled";
 import Logo from "../Logo";
+import ColorInput from "../ColorInput";
 import githubIcon from "../../assets/github-icon.svg";
 
-export default function Header({ children }) {
+Header.propTypes = {
+  currentColor: PropTypes.string.isRequired,
+  onColorChange: PropTypes.func.isRequired
+};
+
+export default function Header({ currentColor, onColorChange }) {
   return (
     <S.Wrapper>
       <Logo />
-      {children}
+      <ColorInput currentColor={currentColor} onColorChange={onColorChange} />
       <a
-        rel="noopener noreferrer"
         target="_blank"
-        href="https://github.com/luizdemoraes.dev/mono"
+        rel="noopener noreferrer"
+        href="https://github.com/luizdemoraes/mono"
       >
         <img
           src={githubIcon}

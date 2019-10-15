@@ -9,31 +9,30 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   width: calc(var(--space-xl) * 2);
   height: var(--space-lg);
-  border-radius: var(--radius);
   overflow: hidden;
   border: 1px solid var(--border);
   background-color: var(--background);
 `;
 
 export const Input = styled.input`
-  color: black;
-  font-weight: 600;
   display: flex;
   width: var(--space-xxl);
   height: 100%;
-  border: unset;
   padding-left: 12px;
-  background: unset;
+  color: black;
+  font-weight: 600;
+  border: unset;
   outline: none;
+  background: unset;
   text-transform: uppercase;
 `;
 
-export const ColorPicker = styled.span`
+export const PickedColor = styled.span`
   display: block;
+  flex-shrink: 0;
   width: var(--space-sm);
   height: var(--space-sm);
-  flex-shrink: 0;
   border-radius: 50%;
   margin-right: var(--space-xxs);
-  background-color: ${props => props.color || "white"};
+  background-color: ${props => props.currentColor};
 `;
