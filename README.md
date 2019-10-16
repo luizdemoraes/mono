@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  MONO é um <strong>gerador de paletas de cores monocromáticas</strong>.
+  <a href="https://mono.luizdemoraes.dev" rel="noopener noreferrer" target="_blank">MONO</a> é um <strong>gerador de paletas de cores monocromáticas</strong>.
 </p>
 
 ---
