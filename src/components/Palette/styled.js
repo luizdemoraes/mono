@@ -84,7 +84,7 @@ export const Color = styled(motion.button).attrs(() => ({
 }))`
   position: relative;
   display: block;
-  cursor: copy;
+  cursor: pointer;
   width: 100%;
   height: 100%;
   border: none;

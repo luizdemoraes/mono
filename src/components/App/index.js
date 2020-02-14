@@ -19,7 +19,7 @@ export default function App() {
   });
 
   function handleCopy(color) {
-    toast(`📋 — Copied "${color}"`);
+    toast(`MONO: "${color}" copied!`);
   }
 
   return (

@@ -1,12 +1,14 @@
 .custom-rt-toast {
-  color: #9d9d9d;
+  color: black;
   padding-left: var(--space-sm);
   font-size: 14px;
   font-weight: 500;
   font-family: Inter, sans-serif;
   border: 1px solid var(--border);
+  background-color: white;
+  box-shadow: none;
 }
 
 .custom-rt-progressbar {
-  background: rgba(0, 0, 0, 0.2);
+  background: black;
 }

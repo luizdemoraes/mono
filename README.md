@@ -3,15 +3,6 @@
 </p>
 
 <p align="center">
-  <a href="#">
-    <img src="https://img.shields.io/badge/made%20with-love-E760A4.svg?style=flat-square" alt="Made with love">
-  </a>
-  <a href="#">
-    <img src="https://img.shields.io/github/license/luizdemoraes/mono?style=flat-square" alt="License">
-  </a>
-</p>
-
-<p align="center">
   <a href="https://mono.luizdemoraes.dev" rel="noopener noreferrer" target="_blank">MONO</a> é um <strong>gerador de paletas de cores monocromáticas</strong>.
 </p>
 
@@ -23,7 +14,7 @@ Este é um projeto pessoal desenvolvido com a intenção de aprender ReactJS.
 
 ## Contribuindo
 
-Apesar de ser um projeto pessoal e pequeno, se você encontrou algum bug ou deseja melhorar esse projeto, sinta-se livre para abrir uma issue [aqui](https://github.com/luizdemoraes/mono/issues) com as suas sugestões!
+Se você encontrou algum bug ou deseja melhorar esse projeto, sinta-se livre para abrir uma issue [aqui](https://github.com/luizdemoraes/mono/issues).
 
 ## Bibliotecas utilizadas
 
